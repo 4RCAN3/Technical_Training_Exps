@@ -1,5 +1,5 @@
-nums = [1, 6, 9]
-n = 12
+nums = list(map(int, input('').split(' ')))
+n = int(input(''))
 count = 0
 
 def getMax(sub, nums):
@@ -11,9 +11,10 @@ def getMax(sub, nums):
     
 digits = []
 while count < n :
-    if nums == []:
-        break
     sub = n - count
+    if nums == [] or (len(nums) == 1 and sub < nums[0]):
+        break
+
     max_n = getMax(sub, nums)
     digits.append(max_n)
     count += max_n
