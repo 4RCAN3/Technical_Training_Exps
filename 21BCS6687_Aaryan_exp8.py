@@ -3,6 +3,8 @@ n = int(input(''))
 count = 0
 
 def getMax(sub, nums):
+    if nums == []:
+        return None
     if max(nums) <= sub:
         return max(nums)
     else:
@@ -16,6 +18,8 @@ while count < n :
         break
 
     max_n = getMax(sub, nums)
+    if max_n is None:
+        break
     digits.append(max_n)
     count += max_n
 
