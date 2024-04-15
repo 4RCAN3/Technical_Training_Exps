@@ -26,7 +26,7 @@ for i in range(len(sorted_nums)):
             break
         digits.append(max_n)
         count += max_n
-
+        
     max_val = sum(digits) if sum(digits) > max_val else max_val
 
 print(max_val)
